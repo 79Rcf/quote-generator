@@ -64,7 +64,7 @@ function showError(message) {
 
 async function getJokes() {
     try {
-        let url = 'https://v2.jokeapi.dev/joke/Programming,Miscellaneous,Dark,Pun,Spooky,Christmas?amount=10';
+        let url = 'https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&amount=10';
         let response = await fetch(url);
         let data = await response.json(); 
         apiJokes = data.jokes;
